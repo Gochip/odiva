@@ -9,6 +9,7 @@
     <string name="txt_view_intro_ids_i">Login IDS-I</string>
     <string name="txt_view_intro_ids_ii">Login IDS-II</string>
     <string name="txt_view_intro_ids_iii">Login IDS-III</string>
+    <string name="txt_view_intro_ids_iv">Login IDS-IV</string>
     <string name="edit_txt_user">User</string>
     <string name="edit_txt_password">Password</string>
     <string name="btn_save">Login</string>

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToInsecureDataStorageIV(View view) {
-        Intent intent = new Intent(this, InsecureDataStorageIActivity.class);
+        Intent intent = new Intent(this, InsecureDataStorageIVActivity.class);
         startActivity(intent);
     }
 
