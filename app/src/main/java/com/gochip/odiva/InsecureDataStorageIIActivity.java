@@ -36,6 +36,6 @@ public class InsecureDataStorageIIActivity extends AppCompatActivity {
         catch(Exception e) {
             Log.d("Diva", "Error occurred while inserting into database: " + e.getMessage());
         }
-        Toast.makeText(this, "3rd party credentials saved successfully!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "You are login!", Toast.LENGTH_SHORT).show();
     }
 }

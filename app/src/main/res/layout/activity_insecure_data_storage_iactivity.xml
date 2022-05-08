@@ -18,7 +18,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="fill_horizontal|fill_vertical"
-        android:text="@string/txt_view_intro_isd_i"
+        android:text="@string/txt_view_intro_ids_i"
         android:textAlignment="center"
         android:textColor="@color/material_grey_600"
         android:textSize="32dp" />

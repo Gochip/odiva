@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ODIVA">
         <activity
+            android:name=".InsecureDataStorageIIIActivity"
+            android:exported="true" />
+        <activity
             android:name=".InsecureDataStorageIIActivity"
             android:exported="true" />
         <activity

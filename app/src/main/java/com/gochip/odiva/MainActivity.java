@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToInsecureDataStorageIII(View view) {
-        Intent intent = new Intent(this, InsecureDataStorageIActivity.class);
+        Intent intent = new Intent(this, InsecureDataStorageIIIActivity.class);
         startActivity(intent);
     }
 

@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAlignment="center"
-    tools:context=".InsecureDataStorageIIActivity">
-
+    tools:context=".InsecureDataStorageIIIActivity">
     <Button
-        android:id="@+id/ids2button"
+        android:id="@+id/ids3button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_txt_password"
@@ -51,9 +49,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="fill_horizontal|fill_vertical"
-        android:text="@string/txt_view_intro_ids_ii"
+        android:text="@string/txt_view_intro_ids_iii"
         android:textAlignment="center"
         android:textColor="@color/material_grey_600"
         android:textSize="32sp" />
-
 </RelativeLayout>
