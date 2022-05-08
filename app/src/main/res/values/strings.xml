@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ODIVA</string>
+    <string name="btn_insecure_data_storage_i">Insecure Data Storage I</string>
+    <string name="btn_insecure_data_storage_ii">Insecure Data Storage II</string>
+    <string name="btn_insecure_data_storage_iii">Insecure Data Storage III</string>
+    <string name="btn_insecure_data_storage_iv">Insecure Data Storage IV</string>
+    <string name="btn_input_validation_issues_i">Input Validation Issues I</string>
+    <string name="btn_input_validation_issues_ii">Input Validation Issues II</string>
+    <string name="txt_view_intro_isd_i">Login IDS-I</string>
+    <string name="txt_view_intro_isd_ii">Login IDS-II</string>
+    <string name="edit_txt_user">User</string>
+    <string name="edit_txt_password">Password</string>
+    <string name="btn_save">Login</string>
+    <string name="title_activity_insecure_data_storage_iiactivity">InsecureDataStorageIIActivity</string>
+</resources>
