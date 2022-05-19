@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToInputValidationIssuesI(View view) {
-        Intent intent = new Intent(this, InsecureDataStorageIActivity.class);
+        Intent intent = new Intent(this, InputValidationIssuesIActivity.class);
         startActivity(intent);
     }
 
     public void goToInputValidationIssuesII(View view) {
-        Intent intent = new Intent(this, InsecureDataStorageIActivity.class);
+        Intent intent = new Intent(this, AccessControlIssuesIActivity.class);
         startActivity(intent);
     }
 }

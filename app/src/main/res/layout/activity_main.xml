@@ -107,14 +107,14 @@
         app:strokeColor="#f3972b" />
 
     <Button
-        android:id="@+id/btn_input_validation_issues_ii"
+        android:id="@+id/btn_access_control_issues_i"
         android:layout_width="358dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:onClick="goToInputValidationIssuesII"
-        android:text="@string/btn_input_validation_issues_ii"
+        android:text="@string/btn_access_control_issues_i"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_input_validation_issues_i"
