@@ -122,3 +122,50 @@ ls -l
 cat uinfo…
 ```
 
+## Data Insecure Storage IV: External Storage ##
+Almacenar datos sensibles en un Storage externo también tiene riesgos. Para que una app tenga acceso a leer y escribir en el External Storage, necesita 2 permisos declarados en el AndroidManifest. Ellos son:
+
+```
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+Pero otra app podría acceder a estos archivos almacenados en el External Storage.
+
+Código de ejemplo:
+
+```
+EditText usr = (EditText) findViewById(R.id.edit_txt_user);
+EditText pwd = (EditText) findViewById(R.id.edit_txt_password);
+
+File sdir = Environment.getExternalStorageDirectory();
+
+try {
+   File uinfo = new File(sdir.getAbsolutePath() + "/.uinfo.txt");
+   uinfo.setReadable(true);
+   uinfo.setWritable(true);
+   FileWriter fw = new FileWriter(uinfo);
+   fw.write(usr.getText().toString() + ":" + pwd.getText().toString() + "\n");
+   fw.close();
+   Toast.makeText(this, "You are login!", Toast.LENGTH_SHORT).show();
+   // Now you can read the temporary file where ever the credentials are required.
+}
+catch (Exception e) {
+   Toast.makeText(this, "File error occurred", Toast.LENGTH_SHORT).show();
+   Log.d("Diva", "File error: " + e.getMessage());
+}
+```
+
+### Pasos para superar el desafío ###
+1. Ejecutar la app en algún emulador usando: `./emulator -avd Nexus_S_API_25`. Tener en cuenta que emulator es un script se encuentra en [HOME]/Android/Sdk/tools.
+2. Abrir la app ODIVA y presionar el botón “Insecure Data Storage IV”.
+3. Ingresar un usuario y un password, y presionar en el botón “Login”. Esto hizo que tanto el usuario y el password se hayan guardado en el External Storage. Si aparece un error, verificar si la app tiene los permisos necesarios de acceso a lectura y escritura en el External Storage.
+4. Ahora para visualizar estos datos sensibles, se debe ejecutar:
+
+```
+./adb root
+./adb shell
+cd /storage/emulated/0
+ls -la
+cat .uinfo.txt
+```
