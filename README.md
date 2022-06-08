@@ -3,7 +3,7 @@ Other Damn insecure and vulnerable App
 
 This project is a Android Studio Project, so it's ready for open it and run it.
 
-Contains 6 challenges:
+Contains 6 security challenges.
 
 ## Insecure Data Storage I: Shared Preferences ##
 Android ofrece un objeto llamado `SharedPreferences` para almacenar datos en formato `clave-valor`. Sin embargo, almacenar datos sensibles en este Storage no es recomendable porque en general es de fácil acceso.
