@@ -39,7 +39,6 @@ spedit.commit();
 5. Finalmente, vemos los datos con cat ~/archivo_sp.xml.
 
 
-
 ## Insecure Data Storage II: SQLite ##
 SQLite es un Storage que se puede usar en cualquier aplicación Android para almacenar datos como tablas SQL. Hay que tener cuidado con almacenar datos sensibles sin cifrar en SQLite porque es de fácil acceso.
 
@@ -80,3 +79,46 @@ $ cd /data/data/com.gochip.odiva/databases
 $ sqlite3 ids2
 sqlite> select * from myuser
 ```
+
+
+## Insecure Data Storage III: Temporary File ##
+Los archivos temporales también son de fácil acceso por lo que no se recomienda almacenar datos sensibles sin cifrar.
+
+Código de ejemplo:
+
+```
+EditText usr = (EditText) findViewById(R.id.edit_txt_user);
+EditText pwd = (EditText) findViewById(R.id.edit_txt_password);
+
+File ddir =  new File(getApplicationInfo().dataDir);
+
+try {
+   File uinfo = File.createTempFile("uinfo", "tmp", ddir);
+   uinfo.setReadable(true);
+   uinfo.setWritable(true);
+   FileWriter fw = new FileWriter(uinfo);
+   fw.write(usr.getText().toString() + ":" + pwd.getText().toString() + "\n");
+   fw.close();
+   Toast.makeText(this, "You are login!", Toast.LENGTH_SHORT).show();
+   // Now you can read the temporary file where ever the credentials are required.
+}
+catch (Exception e) {
+   Toast.makeText(this, "File error occurred", Toast.LENGTH_SHORT).show();
+   Log.d("Diva", "File error: " + e.getMessage());
+}
+```
+
+### Pasos para superar el desafío ###
+1. Ejecutar la app en algún emulador usando: `./emulator -avd Nexus_S_API_25`. Tener en cuenta que emulator es un script se encuentra en [HOME]/Android/Sdk/tools.
+2. Abrir la app ODIVA y presionar el botón “Insecure Data Storage III”.
+3. Ingresar un usuario y un password, y presionar en el botón “Login”. Esto hizo que tanto el usuario y el password se hayan guardado en un Temporary File.
+4. Ahora para visualizar estos datos sensibles, se debe ejecutar:
+
+```
+./adb root
+./adb shell
+cd /data/data/com.gochip.odiva/
+ls -l
+cat uinfo…
+```
+
