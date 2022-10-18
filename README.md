@@ -171,5 +171,7 @@ cat .uinfo.txt
 ```
 
 ### Visualizar el almacenamiento externo desde otra app ###
-```https://github.com/Gochip/analyze_external_storage/```
+```
+https://github.com/Gochip/analyze_external_storage/
+```
 
