@@ -169,3 +169,7 @@ cd /storage/emulated/0
 ls -la
 cat .uinfo.txt
 ```
+
+### Visualizar el almacenamiento externo desde otra app ###
+```https://github.com/Gochip/analyze_external_storage/```
+
